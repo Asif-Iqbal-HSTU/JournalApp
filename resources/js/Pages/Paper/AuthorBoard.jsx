@@ -936,6 +936,7 @@ export default function AuthorBoard({ message, auth }) {
                     </div>
                 </div>
             </div>
+            {/**This is a comment */}
             {selectedPaper && (
                 <Modal show={showModal2} onClose={() => setShowModal2(false)}>
                     <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
