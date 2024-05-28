@@ -1,66 +1,119 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Journal App
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Introduction
 
-## About Laravel
+Journal App is a web application designed to facilitate the upload and management of papers by authors. Built with Laravel, ReactJS, and InertiaJS, Journal App provides a seamless and user-friendly interface for authors to manage their submissions efficiently. It also allows the Editorial Board and Reviewers to manage their associated papers very easily.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Table of Contents
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- [Introduction](#introduction)
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technologies Used](#technologies-used)
+- [Screenshots](#screenshots)
+- [Contact](#contact)
+- [Acknowledgements](#acknowledgements)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Features
 
-## Learning Laravel
+- Easy upload of papers by authors
+- Secure authentication and authorization
+- Real-time updates and notifications
+- User-friendly interface with ReactJS and InertiaJS
+- Efficient management of papers
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Requirements
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- Laravel
+- ReactJS
+- InertiaJS
+- Composer
+- MySQL
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Installation
 
-## Laravel Sponsors
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/Asif-Iqbal-HSTU/JournalApp
+    cd JournalApp
+    ```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+2. Install backend dependencies:
+    ```bash
+    composer install
+    ```
 
-### Premium Partners
+3. Install frontend dependencies:
+    ```bash
+    npm install
+    npm run dev
+    ```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+4. Set up environment variables:
+    ```bash
+    cp .env.example .env
+    php artisan key:generate
+    ```
 
-## Contributing
+5. Configure the `.env` file with your database settings and other environment variables.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+6. Run migrations and seed the database:
+    ```bash
+    php artisan migrate --seed
+    ```
 
-## Code of Conduct
+7. Start the development server:
+    ```bash
+    php artisan serve
+    ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Usage
 
-## Security Vulnerabilities
+### Author Module
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- **Login**: Teachers can log in securely to the platform.
+- **Upload Papers**: Authors can easily upload their papers.
+- **Manage Submissions**: Authors can view the status of their submission information.
+- **Notifications**: Authors receive real-time notifications for updates.
 
-## License
+### Editor Module
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- **Submission Management**: Editors can send papers to Reviewers.
+- **Take Decisions**: Editors can make decisions about the submissions.
+
+- ### Reviewer Module
+
+- **Submission Management**: Reviewers can provide important comments.
+
+## Technologies Used
+
+- **Backend**: Laravel
+- **Frontend**: ReactJS, InertiaJS
+- **Database**: MySQL
+- **Styling**: Tailwind CSS
+- **Authentication**: Laravel Breeze
+
+## Screenshots
+
+### Author Dashboard
+![image](https://github.com/Asif-Iqbal-HSTU/JournalApp/assets/40653155/bd984cc0-6a97-47eb-9335-d97dc86898b5)
+
+### Editor Dashboard
+![image](https://github.com/Asif-Iqbal-HSTU/JournalApp/assets/40653155/0014a84e-ee55-4379-bd9f-365ba9639dfd)
+
+### Editor Taking Decisions
+![image](https://github.com/Asif-Iqbal-HSTU/JournalApp/assets/40653155/8cc2b8d2-11f6-4d25-9857-e83135dd85e8)
+
+
+
+## Contact
+
+For any inquiries or feedback, please contact us at:
+- Email: asif.iqbal.hstu@gmail.com
+
+## Acknowledgements
+
+- Thanks to the development team for their dedication and hard work.
+- Special thanks to the educators who provided valuable feedback during the development process.
